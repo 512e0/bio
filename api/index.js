@@ -1,0 +1,1 @@
+const fs = require("node:fs"); const path = require("node:path"); const page = fs.readFileSync(path.join(__dirname, "..", "@mydagon.html")); module.exports = function handler(_request, response) { response.setHeader("Content-Type", "text/html; charset=utf-8"); response.setHeader("X-Content-Type-Options", "nosniff"); response.status(200).send(page); };
